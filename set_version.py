@@ -8,5 +8,6 @@ if __name__ == "__main__":
         data = json.load(f)
         f.seek(0)
         data["version"] = os.environ["GITHUB_REF"].rsplit("/")[-1]
+        data["version"] = "7.4.2"
         json.dump(data, f)
         f.truncate()
